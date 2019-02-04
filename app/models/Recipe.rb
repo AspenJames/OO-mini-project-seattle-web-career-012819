@@ -13,6 +13,18 @@ class Recipe
 
   def self.most_popular
     # retuns the recipe instance with the highest number of users
+    tally = Hash.new(0)
+    most_count = 0
+    most_thing = nil
+
+    RecipeCard.all.each do |rc|
+      tally[rc.recipe] += 1
+      if tally[rc.recipe] > most_count
+        most_count = tally[rc.recipe]
+        most_thing = rc.recipe
+      end
+    end
+    most_thing
   end
 
   def users
