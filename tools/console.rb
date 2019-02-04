@@ -1,8 +1,9 @@
 require_relative '../config/environment.rb'
 
 hamburger = Recipe.new("Hamburger")
-
 bad_sandwich = Recipe.new("Bad Sandwich")
+toast = Recipe.new("Toast")
+taco = Recipe.new("Taco")
 
 beef      = Ingredient.new("Beef")
 wheat     = Ingredient.new("Wheat")
@@ -26,6 +27,8 @@ terri = User.new("Terri")
 RecipeCard.new(terri, hamburger, 9)
 RecipeCard.new(pat, hamburger, 8)
 RecipeCard.new(pat, bad_sandwich, 2)
+RecipeCard.new(pat, toast, 5)
+RecipeCard.new(pat, taco, 9)
 puts RecipeIngredient.all
 puts
 

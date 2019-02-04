@@ -20,4 +20,14 @@ class User
   def add_allergen(ingredient)
     Allergen.new(self, ingredient)
   end
+
+  def recipe_cards
+    RecipeCard.all.select do |rc|
+      rc.user == self
+    end
+  end
+
+  def top_three_recipes
+    recipe_cards.sort_by(&:rating).map(&:recipe).last(3)
+  end
 end
