@@ -16,4 +16,8 @@ DEPENDENCIES
   require_all
 
 BUNDLED WITH
+<<<<<<< HEAD
+   1.17.3
+=======
    2.0.1
+>>>>>>> 17a96eaa4d7b9336b99c73668990b0391181dce9
